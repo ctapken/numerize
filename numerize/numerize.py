@@ -39,7 +39,7 @@ def numerize(n, decimals=2):
     if n < 0:
         is_negative_string = "-"
     n = abs(Decimal(n))
-#I can't come up with a better code. Reason for that might be lack of skill in Python or the fact that I'm having quite the headache at the moment...
+#Unfortunately I can't come up with a better code, although a for-loop might be a good way to improve the code. Anyway, have a nice day!
     if n < 1000:
         return is_negative_string + str(drop_zero(round_num(n, decimals)))
     elif n >= 1000 and n < 1000000:
@@ -68,4 +68,3 @@ def numerize(n, decimals=2):
             return is_negative_string + str(drop_zero(round_num(n, decimals))) + "T"
     else:
         return is_negative_string + str(n)
-
